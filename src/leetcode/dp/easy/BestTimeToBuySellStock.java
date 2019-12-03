@@ -1,12 +1,19 @@
-package leetcode.easy;
+package leetcode.dp.easy;
 
 public class BestTimeToBuySellStock {
     public int maxProfit(int[] prices) {
         int max = 0;
-        for (int i = 0; i < prices.length; i++) {
-            for (int j = i+1; j < prices.length; j++) {
-                int diff = prices[j]-prices[i];
-                if(diff > max) max = diff;
+        if(prices.length > 0){
+            int storage[] = new int[prices.length];
+            storage[0] = prices[0];
+            for (int i = 1; i < prices.length; i++) {
+                if(prices[i] < storage[i-1]){
+                    storage[i] = prices[i];
+                }else {
+                    storage[i] = storage[i-1];
+                    int value = prices[i] - storage[i];
+                    if(max < value) max = value;
+                }
             }
         }
 

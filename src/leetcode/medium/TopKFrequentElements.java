@@ -17,7 +17,7 @@ public class TopKFrequentElements {
 
         //loop through Hashmap and put data into heap
         //if the heap size is bigger than k, remove it,
-        // because root value is the less count of array. if it's not included into k, we don't need it anymore
+        // because root value is the smallest count of array. if it's not included into k, we don't need it anymore
         for (int num : storage.keySet()){
             heap.add(num);
             if(heap.size() > k) {
