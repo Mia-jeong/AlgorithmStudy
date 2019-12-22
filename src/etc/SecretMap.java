@@ -1,6 +1,4 @@
-package kakao;
-
-import java.util.Scanner;
+package etc;
 
 public class SecretMap {
     public String[] solution(int n, int[] arr1, int[] arr2) {

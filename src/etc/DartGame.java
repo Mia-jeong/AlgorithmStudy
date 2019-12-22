@@ -1,4 +1,4 @@
-package kakao;
+package etc;
 
 public class DartGame {
     public int solution(String dartResult) {
